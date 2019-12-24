@@ -1,0 +1,15 @@
+npm set registry http://registry.npmjs.org/ 
+npm install express
+# fixes npm ERR! code ERR_OSSL_PEM_NO_START_LINE issue?
+npm info "eslint-config-airbnb-base@latest" peerDependencies
+
+
+npm install --save-dev eslint
+npm install --save-dev eslint-plugin-import
+npm install --save-dev eslint-config-airbnb-base
+
+# add "lint" as a script in packages.json
+
+npm run lint
+
+npm install express
