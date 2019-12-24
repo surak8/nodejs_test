@@ -1,15 +1,12 @@
 /* eslint-disable no-console */
-const http = require('http');
+// import express from 'express';
+const express = require('express');
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+const portNum = 3000;
+const hostname = 'localhost';
+const app = express();
+app.get('/', (req, res) => res.send('Hello World!'));
+app.listen(portNum, () => {
+  console.log(`http://${hostname}:${portNum}/`);
+  console.log('Example app listening on port 3000!');
 });
